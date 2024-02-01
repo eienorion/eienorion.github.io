@@ -1,0 +1,418 @@
+:root {
+  --primary: #529ee9;
+  --bg: #f66161;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  /* min-height: 2000px; */
+}
+
+/* navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgb(246, 97, 97);
+  border-bottom: 1px solid #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+}
+
+.navbar .navbar-nav a {
+  color: #fff;
+  display: inline-block;
+  font-size: 1.2rem;
+  margin: 0.3rem;
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--primary);
+}
+.navbar .navbar-nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.3rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-extra a {
+  color: #fff;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--primary);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
+/* hero section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/header-bg.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background-color: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 3%,
+    rgba(255, 255, 255, 0) 25%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content h1 span {
+  color: var(--primary);
+}
+
+.hero .content p {
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  line-height: 1.4;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* about section */
+.about {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+}
+
+.about p {
+  padding-left: 12rem;
+}
+
+.about h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100;
+  height: 20rem;
+}
+
+.about .row .content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+/* verb section start */
+
+.verb {
+  padding: 10rem 7% 1.4rem;
+  min-height: 100vh;
+  background: var(--bg);
+  position: relative;
+}
+
+.verb h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: var(--secondary);
+  margin-bottom: 3rem;
+}
+
+.verb p {
+  padding-bottom: 2rem;
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-weight: 100;
+  line-height: 1.6;
+}
+
+.verb .vocab {
+  padding-top: 1.2rem;
+}
+
+.verb .vocab h1 {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  padding-inline-start: 0;
+  text-align: center;
+  font-size: 2.1rem;
+  font-weight: 700;
+  max-width: 102.9rem;
+  color: var(--primary);
+}
+
+.verb .vocab h1 span {
+  color: var(--hover);
+}
+
+ul {
+  padding-inline-start: 1.6rem;
+}
+
+.verb .vocab h2 {
+  padding-left: 0.7rem;
+  text-align: left;
+  font-size: 1.6rem;
+  max-width: 103rem;
+  margin: auto;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.verb .vocab p {
+  padding-bottom: 2rem;
+  padding-left: 0.7rem;
+  text-align: left;
+  font-size: 1.3rem;
+  max-width: 103rem;
+  margin: auto;
+  font-weight: 200;
+}
+
+.abc {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 5rem 2rem;
+  padding-bottom: 1rem;
+}
+
+.abc a {
+  text-decoration: none;
+  color: var(--hover);
+  margin: 1rem;
+  font-weight: 700;
+}
+
+.abc a:hover {
+  color: var(--secondary);
+}
+
+/* verb section end*/
+
+/* Footer */
+footer {
+  background-color: var(--bg);
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: var(--hover);
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: var(--secondary);
+}
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: var(--hover);
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+footer .credit {
+  color: var(--hover);
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color: var(--hover);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 7px;
+}
+
+.verb .content {
+  padding: 8rem 7% 1.4rem;
+}
+
+.verb h4 {
+  text-align: center;
+  font-size: 2.3rem;
+  margin-bottom: 3rem;
+}
+
+.verb h2 {
+  font-size: 1rem;
+  text-align: left;
+}
+
+/* table style start*/
+
+table > thead tr th {
+  background-color: var(--bg);
+  color: #fff;
+}
+
+/* table style end*/
+
+/* media queries */
+
+/* laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* tablet */
+
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  #hamburger-menu {
+    display: inline-block;
+  }
+
+  .navbar .navbar-nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background-color: #fff;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.3s;
+  }
+
+  .navbar .navbar-nav.active {
+    right: 0;
+  }
+
+  .navbar .navbar-nav a {
+    color: #000;
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+  }
+}
+
+.navbar .navbar-nav a::after {
+  transform-origin: 0 0;
+}
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(0.3);
+}
+
+/* mobile */
+
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
